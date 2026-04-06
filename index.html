@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio personal de Daniel Echeverría, estudiante de Ingeniería de Sistemas." />
+    <title>Daniel Echeverría — Portafolio</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <!-- ========== ENCABEZADO ========== -->
+    <header>
+        <div class="container">
+        <h1>Daniel Echeverría</h1>
+
+        <!-- Menú de navegación -->
+        <nav aria-label="Navegación principal">
+            <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <!-- Enlace a la página de mascotas -->
+            <li><a href="mascotas.html">🐾 Mis Mascotas</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ========== SOBRE MÍ ========== -->
+        <section id="sobre-mi" aria-labelledby="titulo-sobre-mi">
+        <div class="container">
+            <div class="intro">
+            <!-- Imagen de perfil (puedes reemplazarla con una foto tuya) -->
+            <img
+                class="avatar"
+                src="assets/images/avatar.png"
+                alt="Foto de perfil de Daniel Echeverría"
+                width="120"
+                height="120"
+                loading="lazy"
+            />
+            <div class="intro-text">
+                <span class="badge">Estudiante · Ingeniero de Sistemas · Coder Riwi</span>
+                <h2 id="titulo-sobre-mi" class="section-title">Sobre mí</h2>
+                <p>
+                Hola, soy Daniel Echeverría, estudiante de Ingeniería de Sistemas
+                en Barranquilla, Colombia. También soy Coder Riwi. Me apasiona el desarrollo web full-stack,
+                la lógica y los algoritmos. Disfruto construir aplicaciones que
+                resuelven problemas reales con React, Node.js y Python.
+                </p>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- ========== PROYECTOS ========== -->
+        <section id="proyectos" aria-labelledby="titulo-proyectos">
+            <div class="container">
+                <h2 id="titulo-proyectos" class="section-title">Proyectos</h2>
+
+                <!-- Lista de proyectos -->
+                <ul class="projects-list">
+
+                    <li>
+                        <div class="project-card">
+                            <h3>Sistema de Sorteos Interactivo</h3>
+                            <p>Aplicación web que permite gestionar sorteos dinámicos, selección aleatoria de participantes y visualización de resultados en tiempo real.</p>
+                            <a href="#" class="project-link">Ver detalles →</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="project-card">
+                            <h3>Proyecto Energía Inteligente</h3>
+                            <p>Aplicación web para la predicción del consumo energético en oficinas que integra scripts de Octave con una API en Flask y una interfaz interactiva en Streamlit, utilizando métodos numéricos como interpolación de Lagrange y splines.</p>
+                            <a href="https://github.com/Dan18eP/proyecto_consumo_energetico" class="project-link">Demo próximamente →</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="project-card">
+                            <h3>Calculadora de Sistemas Solares Fotovoltaicos</h3>
+                            <p>Aplicación web para la estimación personalizada de sistemas solares fotovoltaicos, permitiendo calcular consumo energético, dimensionamiento del sistema y recomendaciones según las necesidades del usuario.</p>
+                            <a href="https://docs.google.com/document/d/1CgJLxAboY3l5luFa2vceTDBo97R0TkCF/edit?usp=sharing&ouid=112135590430584512201&rtpof=true&sd=true" class="project-link">Ver detalles →</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========== CONTACTO ========== -->
+        <section id="contacto" aria-labelledby="titulo-contacto">
+            <div class="container">
+                <h2 id="titulo-contacto" class="section-title">Contacto</h2>
+                <p style="color: var(--color-text-muted); margin-bottom: var(--space-4);">
+                ¿Tienes un proyecto en mente? Escríbeme.
+                </p>
+
+                <!-- Formulario básico de contacto -->
+                <form class="contact-form" action="#" method="post" novalidate>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Cuéntame tu idea..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer>
+        <p>© 2026 Daniel Echeverría, Coder Riwi · Barranquilla, Colombia · Hecho con HTML5 y CSS</p>
+    </footer>
+
+</body>
+</html>

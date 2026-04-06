@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Galería de mascotas de Daniel Echeverría." />
+    <title>Mis Mascotas — Daniel Echeverría</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Estilos compartidos -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <!-- ========== ENCABEZADO ========== -->
+    <header>
+        <div class="container">
+        <h1>Daniel Echeverría</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+            <!-- Enlace de retorno al portafolio -->
+            <li><a href="index.html">← Portafolio</a></li>
+            <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="index.html#proyectos">Proyectos</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ========== HERO MASCOTAS ========== -->
+        <section class="pets-hero" aria-labelledby="titulo-mascotas">
+        <div class="container">
+            <span class="badge">Galería</span>
+            <h1 id="titulo-mascotas">Mis Mascotas 🐾</h1>
+            <p>Estas son las pequeñas estrellas de mi casa. Cada una tiene su propia historia.</p>
+            <!-- Enlace de retorno -->
+            <a href="index.html" class="back-link">← Volver al portafolio</a>
+        </div>
+        </section>
+
+        <!-- ========== GALERÍA ========== -->
+        <section class="pets-gallery" aria-labelledby="titulo-galeria">
+        <div class="container">
+            <h2 id="titulo-galeria" class="section-title">La familia peluda</h2>
+
+            <ul class="pets-grid">
+
+            <!-- Mascota 1 -->
+            <li>
+                <div class="pet-card">
+
+                <img
+                    src="assets/images/luna.jpg"
+                    alt="Luna, una golden retriever color dorado"
+                    width="600"
+                    height="440"
+                    loading="lazy"
+                />
+                <article>
+                    <h2>Luna</h2>
+                    <p class="pet-meta">Golden Retriever · 3 años</p>
+                    <p>
+                    Luna llegó a casa cuando tenía apenas 2 meses. Es la más
+                    traviesa de todas, adora jugar con la pelota y robar
+                    calcetines. Su cola nunca para de moverse.
+                    </p>
+                </article>
+                </div>
+            </li>
+
+            <!-- Mascota 2 -->
+            <li>
+                <div class="pet-card">
+                <img
+                    src="assets/images/miausinho.jpg"
+                    alt="Miausinho, un gato atigrado gris y blanco"
+                    width="600"
+                    height="440"
+                    loading="lazy"
+                />
+                <article>
+                    <h2>Miausinho</h2>
+                    <p class="pet-meta">Gato atigrado · 5 años</p>
+                    <p>
+                    Miausinho es el filósofo de la casa. Vino de Brasil, por eso su nombre curioso. Pasa horas mirando por la
+                    ventana, juzgando en silencio. Cuando está de buen humor,
+                    ronronea tan fuerte que se escucha desde otra habitación.
+                    </p>
+                </article>
+                </div>
+            </li>
+
+            <!-- Mascota 3 -->
+            <li>
+                <div class="pet-card">
+                <img
+                    src="assets/images/pipo.jpg"
+                    alt="Pipo, un periquito verde y amarillo"
+                    width="600"
+                    height="440"
+                    loading="lazy"
+                />
+                <article>
+                    <h2>Pipo</h2>
+                    <p class="pet-meta">Periquito australiano · 2 años</p>
+                    <p>
+                    Pipo llegó como "pájaro tranquilo". Spoiler: no lo es.
+                    Le encanta imitar el sonido del microondas y silbar
+                    cada vez que alguien abre el refrigerador.
+                    </p>
+                </article>
+                </div>
+            </li>
+
+            </ul>
+
+            <!-- Enlace de retorno al portafolio -->
+            <a href="index.html" class="back-link" style="margin-top: var(--space-8); display: inline-flex;">
+            ← Volver al portafolio
+            </a>
+
+        </div>
+        </section>
+
+    </main>
+
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer>
+        <p>© 2026 Daniel Echeverría · Barranquilla, Colombia · <a href="index.html" style="color: var(--color-primary);">Portafolio</a></p>
+    </footer>
+
+</body>
+</html>

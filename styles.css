@@ -122,10 +122,6 @@ section + section {
   margin-bottom: 1rem;
 }
 
-/* --- Hero / Sobre mí --- */
-#sobre-mi {
-  background-image: var(----background-image);
-}
 #sobre-mi .intro {
   display: flex;
   align-items: center;
@@ -133,14 +129,19 @@ section + section {
   flex-wrap: wrap;
 }
 .avatar {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: var(--radius-full);
   object-fit: cover;
   border: 3px solid var(--color-primary);
   box-shadow: var(--shadow-md);
   flex-shrink: 0;
 }
+
+.avatar:hover{
+  box-shadow: var(--shadow-md), 0 0 0 3px var(--color-primary);
+}
+
 .intro-text p {
   color: #d4d1ca;
   max-width: 60ch;
@@ -176,7 +177,7 @@ section + section {
 }
 .project-card:hover {
   box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  transform: translateY(-5px);
 }
 .project-card h3 {
   font-family: var(--font-display);
@@ -238,8 +239,8 @@ section + section {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+  border-color: 1px solid var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary);
 }
 .form-group textarea { resize: vertical; min-height: 120px; }
 
@@ -281,7 +282,7 @@ footer {
 */
 .pets-hero {
   background: var(--color-surface-2);
-  padding: clamp(2rem, 6vw, 4) 0;
+  padding: clamp(2rem, 6vw, 4rem) 0;
 }
 .pets-hero h1 {
   font-family: var(--font-display);
@@ -296,9 +297,8 @@ footer {
 
 /* Galería de mascotas */
 .pets-gallery {
-  padding: clamp(2rem, 6vw, 4) 0;
+  padding: clamp(2rem, 6vw, 4rem) 0;
   background: var(--color-surface-2);
-  background-attachment: attached;
 }
 .pets-grid {
   display: grid;
@@ -316,7 +316,7 @@ footer {
 }
 .pet-card:hover {
   box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
+  transform: translateY(-5px);
 }
 .pet-card img {
   width: 100%;
@@ -348,8 +348,6 @@ footer {
 
 /* Enlace de retorno */
 .back-link {
-  display: inline-flex;
-  align-items: center;
   gap: 0.5rem;
   font-size: var(--text-sm);
   font-weight: 600;

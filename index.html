@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <div id="welcome-message" class="welcome hidden">
+        ¡Bienvenido a mi portafolio!
+    </div>
     
 
     <!-- ========== ENCABEZADO ========== -->
@@ -23,7 +26,7 @@
             <h1>Daniel Echeverría</h1>
 
             <!-- Menú de navegación -->
-            <nav aria-label="Navegación principal">
+            <nav>
                 <ul>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
@@ -38,10 +41,9 @@
     <main>
 
         <!-- ========== SOBRE MÍ ========== -->
-        <section id="sobre-mi" aria-labelledby="titulo-sobre-mi">
+        <section id="sobre-mi">
         <div class="container">
             <div class="intro">
-            <!-- Imagen de perfil (puedes reemplazarla con una foto tuya) -->
                 <img
                     class="avatar"
                     src="assets/images/avatar.png"
@@ -59,13 +61,23 @@
                     la lógica y los algoritmos. Disfruto construir aplicaciones que
                     resuelven problemas reales con React, Node.js y Python.
                     </p>
+
+                    <p id="texto-dinamico">
+                        Me apasiona el desarrollo web full-stack, la lógica y los algoritmos.
+                    </p>
+
+                    <button id="btn-cambiar" class="btn btn-primary">
+                        Cambiar texto
+                    </button>
+
                 </div>
+
             </div>
         </div>
         </section>
 
         <!-- ========== PROYECTOS ========== -->
-        <section id="proyectos" aria-labelledby="titulo-proyectos">
+        <section id="proyectos">
             <div class="container">
                 <h2 id="titulo-proyectos" class="section-title">Proyectos</h2>
 
@@ -77,7 +89,18 @@
                             <h3>Proyecto Energía Inteligente</h3>
                             <p>Aplicación web para la predicción del consumo energético en oficinas que integra scripts de Octave con una API en Flask
                             y una interfaz interactiva en Streamlit, utilizando métodos numéricos como interpolación de Lagrange y splines.</p>
+
+                            <p class="project-extra oculto">
+                                Calcula sistemas solares fotovoltaicos según el consumo del usuario.
+                            </p>
+
                             <a href="https://github.com/Dan18eP/proyecto_consumo_energetico" target="_blank"    class="project-link">Demo próximamente →</a>
+
+                            <button class="btn-toggle">
+                                <span class="arrow">⌄</span>
+                            </button>
+
+                            
                         </div>
                     </li>
 
@@ -86,8 +109,19 @@
                             <h3>Sistema de Sorteos Interactivo</h3>
                             <p>Aplicación web que permite gestionar sorteos dinámicos, selección aleatoria de participantes y visualización de
                             resultados en tiempo real con animaciones. Desarrollada con ReactJS + ViteJS para Frontend y Backend con FastAPI (Python).</p>
+                            
+                            <p class="project-extra oculto">
+                                Realiza sorteos automáticos con resultados en tiempo real.
+                            </p>
+
                             <a href="#" target="_blank" class="project-link">Ver detalles →</a>
-                            </div>
+
+                            <button class="btn-toggle">
+                                <span class="arrow">⌄</span>
+                            </button>
+                            
+                            
+                        </div>
                     </li>
 
                     <li>
@@ -95,7 +129,18 @@
                             <h3>Calculadora de Sistemas Solares Fotovoltaicos</h3>
                             <p>Aplicación web para la estimación personalizada de sistemas solares fotovoltaicos, permitiendo calcular consumo
                             energético, dimensionamiento del sistema y recomendaciones según las necesidades del usuario.</p>
+                            
+                            <p class="project-extra oculto">
+                                Predice el consumo energético usando métodos numéricos.
+                            </p>
+
                             <a href="https://docs.google.com/document/d/1CgJLxAboY3l5luFa2vceTDBo97R0TkCF/edit?usp=sharing&ouid=112135590430584512201&rtpof=true&sd=true" target="_blank" class="project-link">Ver detalles →</a>
+
+                            <button class="btn-toggle">
+                                <span class="arrow">⌄</span>
+                            </button>
+
+                            
                         </div>
                     </li>
 
@@ -104,7 +149,7 @@
         </section>
 
         <!-- ========== CONTACTO ========== -->
-        <section id="contacto" aria-labelledby="titulo-contacto">
+        <section id="contacto">
             <div class="container">
                 <h2 id="titulo-contacto" class="section-title">Contacto</h2>
                 <p style="color: gray; margin-bottom: 1rem;">
@@ -141,6 +186,8 @@
     <footer>
         <p>© 2026 Daniel Echeverría, Coder Riwi · Barranquilla, Colombia · Hecho con HTML5 y CSS</p>
     </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>

@@ -57,13 +57,33 @@ body {
 }
 img { display: block; max-width: 100%; height: auto; }
 ul { list-style: none; }
-a, button { transition: color var(--transition), background var(--transition), box-shadow var(--transition); }
+a, button, .btn { transition: color var(--transition), background var(--transition), box-shadow var(--transition); }
 
 /* --- Contenedor principal --- */
 .container {
   max-width: var(--content-default);
   margin-inline: auto;
   padding-inline: 1.5rem;
+}
+
+.welcome {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--color-primary);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  font-size: var(--text-sm);
+  z-index: 1000;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
 }
 
 /* --- Header / Nav --- */
@@ -122,7 +142,7 @@ section + section {
   margin-bottom: 1rem;
 }
 
-#sobre-mi .intro {
+.intro {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -135,7 +155,6 @@ section + section {
   object-fit: cover;
   border: 3px solid var(--color-primary);
   box-shadow: var(--shadow-md);
-  flex-shrink: 0;
 }
 
 .avatar:hover{
@@ -146,7 +165,16 @@ section + section {
   color: #d4d1ca;
   max-width: 60ch;
   font-size: var(--text-base);
+  text-align: justify;
+  
 }
+
+#texto-dinamico {
+  color: var(--color-surface);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
 .badge {
   display: inline-block;
   background: var(--color-primary);
@@ -161,9 +189,9 @@ section + section {
 }
 
 /* --- Proyectos --- */
-#proyectos .projects-list {
+  .projects-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -192,7 +220,7 @@ section + section {
   margin-bottom: 1rem;
 }
 .project-link {
-  display: inline-flex;
+  display: block;
   align-items: center;
   gap: 0.25rem;
   font-size: var(--text-sm);
@@ -200,6 +228,30 @@ section + section {
   color: var(--color-primary);
   text-decoration: none;
 }
+
+.oculto {
+  display: none;
+}
+
+.arrow {
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.rotado {
+  transform: rotate(180deg);
+}
+
+.btn-toggle {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-primary);
+  margin: 1rem auto 0;
+}
+
 .project-link:hover { color: var(--color-primary-hover); text-decoration: underline; }
 
 /* --- Contacto --- */
@@ -311,7 +363,7 @@ footer {
 }
 .pets-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   width: 100%;
 }
@@ -347,17 +399,17 @@ footer {
   flex: 1;
 }
 
-.pet-card article .pet-description {
+.pet-description {
   margin-top: 0.75rem;
   text-align: justify;
 }
-.pet-card article h2 {
+.pet-card h2 {
   font-family: var(--font-display);
   font-size: var(--text-lg);
   margin-bottom: 0.25rem;
   color: var(--color-primary);
 }
-.pet-card article .pet-meta {
+.pet-meta {
   font-size: var(--text-xs);
   color: var(--color-text-muted);
   font-weight: 600;
@@ -365,7 +417,7 @@ footer {
   letter-spacing: 0.08em;
   margin-bottom: 0.75rem;
 }
-.pet-card article p {
+.pet-card p {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
 }
@@ -383,6 +435,39 @@ footer {
 
 /* --- Responsive --- */
 @media (max-width: 640px) {
-  nav ul { gap: 0.75rem; }
-  #sobre-mi .intro { flex-direction: column; }
+
+  /* NAV en columna */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* PROYECTOS en 1 columna */
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* GALERÍA en 1 columna */
+  .pets-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* SOBRE MÍ en columna */
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+
+  /* PROYECTOS en 1 columna */
+  .projects-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* GALERÍA en 2 columnas */
+  .pets-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

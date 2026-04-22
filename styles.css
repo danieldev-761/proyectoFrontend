@@ -4,12 +4,12 @@
 --font-display: 'JetBrains Mono', 'Fira Code', monospace;
 --font-body: 'Work Sans', 'Helvetica Neue', sans-serif;
 
-  --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
-  --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
-  --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
-  --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
-  --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
-  --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+  --text-2xl: 2.5rem;
 
 
   --background-image: url('assets/images/fondo.png');
@@ -35,13 +35,12 @@
 
   --transition: 0.4s ease;
 
-  --content-default: 960px;
-  scroll-padding-top: 80px; 
 }
 
-/* --- Reset base --- */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
 body {
   min-height: 100dvh;
@@ -59,9 +58,9 @@ img { display: block; max-width: 100%; height: auto; }
 ul { list-style: none; }
 a, button, .btn { transition: color var(--transition), background var(--transition), box-shadow var(--transition); }
 
-/* --- Contenedor principal --- */
+
 .container {
-  max-width: var(--content-default);
+  max-width: var(960px);
   margin-inline: auto;
   padding-inline: 1.5rem;
 }
@@ -86,7 +85,6 @@ a, button, .btn { transition: color var(--transition), background var(--transiti
   pointer-events: none;
 }
 
-/* --- Header / Nav --- */
 header {
   background: var(--color-surface);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -128,7 +126,7 @@ nav a:focus-visible {
   border-bottom-color: var(--color-primary);
 }
 
-/* --- Secciones generales --- */
+
 section {
   padding: clamp(2rem, 6vw, 4rem) 0;
 }
@@ -149,8 +147,8 @@ section + section {
   flex-wrap: wrap;
 }
 .avatar {
-  width: 160px;
-  height: 160px;
+  width: 10rem;
+  height: 10rem;
   border-radius: var(--radius-full);
   object-fit: cover;
   border: 3px solid var(--color-primary);
@@ -169,7 +167,7 @@ section + section {
   
 }
 
-#texto-dinamico {
+#dynamic-text {
   color: var(--color-surface);
   font-weight: 600;
   margin-top: 1rem;
@@ -188,10 +186,10 @@ section + section {
   letter-spacing: 0.08em;
 }
 
-/* --- Proyectos --- */
+
   .projects-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -229,7 +227,7 @@ section + section {
   text-decoration: none;
 }
 
-.oculto {
+.hidden {
   display: none;
 }
 
@@ -239,7 +237,7 @@ section + section {
   transition: transform 0.3s ease;
 }
 
-.rotado {
+.rotated {
   transform: rotate(180deg);
 }
 
@@ -252,10 +250,13 @@ section + section {
   margin: 1rem auto 0;
 }
 
+.btn-toggle:hover {
+  color: var(--color-primary-hover);
+}
+
 .project-link:hover { color: var(--color-primary-hover); text-decoration: underline; }
 
-/* --- Contacto --- */
-#contacto {
+#contact {
   background-image: var(--background-image);
   background-repeat: no-repeat; 
   background-size: cover;       
@@ -321,7 +322,7 @@ section + section {
   box-shadow: var(--shadow-md);
 }
 
-/* --- Footer --- */
+
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -332,7 +333,7 @@ footer {
 }
 
 /* 
-  PÁGINA DE MASCOTAS — mascotas.html
+  PETS PAGE — mascotas.html
 */
 .pets-hero {
   background: var(--color-surface-2);
@@ -349,7 +350,7 @@ footer {
   font-size: var(--text-base);
 }
 
-/* Galería de mascotas */
+
 .pets-gallery {
   padding: clamp(2rem, 6vw, 4rem) 0;
   background: var(--color-surface-2);
@@ -386,11 +387,8 @@ footer {
   transform: translateY(-5px);
 }
 .pet-card img {
-  width: 100%;
-  height: 220px;
   object-fit: cover;
   display: block;
-  flex-shrink: 0;
 }
 .pet-card article {
   padding: 1.5rem;
@@ -422,9 +420,8 @@ footer {
   color: var(--color-text-muted);
 }
 
-/* Enlace de retorno */
+
 .back-link {
-  gap: 0.5rem;
   font-size: var(--text-sm);
   font-weight: 600;
   color: var(--color-primary);
@@ -433,40 +430,41 @@ footer {
 }
 .back-link:hover { color: var(--color-primary-hover); text-decoration: underline; }
 
-/* --- Responsive --- */
+/* --- Responsive for Smartphones --- */
 @media (max-width: 640px) {
 
-  /* NAV en columna */
+  /* NAV in column */
   nav ul {
     flex-direction: column;
     align-items: center;
   }
 
-  /* PROYECTOS en 1 columna */
+  /* PROYECTOS in 1 column */
   .projects-list {
     grid-template-columns: 1fr;
   }
 
-  /* GALERÍA en 1 columna */
+  /* GALLERY in 1 column */
   .pets-grid {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  /* SOBRE MÍ en columna */
+  /* ABOUT ME in column */
   .intro {
     flex-direction: column;
     text-align: center;
   }
 }
 
+/* --- Responsive for Tablets --- */
 @media (min-width: 641px) and (max-width: 1024px) {
 
-  /* PROYECTOS en 1 columna */
+  /* PROJECTS in 2 columns */
   .projects-list {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  /* GALERÍA en 2 columnas */
+  /* GALLERY in 2 columns */
   .pets-grid {
     grid-template-columns: repeat(2, 1fr);
   }

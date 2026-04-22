@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portafolio personal de Daniel Echeverría, estudiante de Ingeniería de Sistemas." />
+    <meta name="description"
+        content="Portafolio personal de Daniel Echeverría, estudiante de Ingeniería de Sistemas." />
     <title>Daniel Echeverría — Portafolio</title>
 
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@300..700&display=swap"
+        rel="stylesheet">
 
     <!-- Estilos -->
     <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
     <div id="welcome-message" class="welcome hidden">
         ¡Bienvenido a mi portafolio!
     </div>
-    
 
-    <!-- ========== ENCABEZADO ========== -->
     <header>
         <div class="container">
             <h1>Daniel Echeverría</h1>
 
-            <!-- Menú de navegación -->
             <nav>
                 <ul>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <!-- Enlace a la página de mascotas -->
-                <li><a href="mascotas.html">🐾 Mis Mascotas</a></li>
+                    <li><a href="#about-me">Sobre mí</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="mascotas.html">🐾 Mis Mascotas</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,77 +41,75 @@
 
     <main>
 
-        <!-- ========== SOBRE MÍ ========== -->
-        <section id="sobre-mi">
-        <div class="container">
-            <div class="intro">
-                <img
-                    class="avatar"
-                    src="assets/images/avatar.png"
-                    alt="Foto de perfil de Daniel Echeverría"
-                    width="120"
-                    height="120"
-                    loading="lazy"
-                />
-                <div class="intro-text">
-                    <span class="badge">Estudiante · Ingeniero de Sistemas · Coder Riwi</span>
-                    <h2 id="titulo-sobre-mi" class="section-title">Sobre mí</h2>
-                    <p>
-                    Hola, soy Daniel Echeverría, estudiante de Ingeniería de Sistemas
-                    en Barranquilla, Colombia. También soy Coder Riwi. Me apasiona el desarrollo web full-stack,
-                    la lógica y los algoritmos. Disfruto construir aplicaciones que
-                    resuelven problemas reales con React, Node.js y Python.
-                    </p>
+        <section id="about-me">
+            <div class="container">
+                <div class="intro">
+                    <img class="avatar" src="assets/images/avatar.png" alt="Foto de perfil de Daniel Echeverría"
+                        width="120" height="120" loading="lazy" />
+                    <div class="intro-text">
+                        <marquee class="badge">
+                            Estudiante · Ingeniero de Sistemas · Coder Riwi
+                        </marquee>
+                        <h2 class="section-title">Sobre mí</h2>
+                        <p>
+                            Hola, soy Daniel Echeverría, estudiante de Ingeniería de Sistemas
+                            en Barranquilla, Colombia. También soy Coder Riwi. Me apasiona el desarrollo web full-stack,
+                            la lógica y los algoritmos. Disfruto construir aplicaciones que
+                            resuelven problemas reales con React, Node.js y Python.
+                        </p>
 
-                    <p id="texto-dinamico">
-                        Me apasiona el desarrollo web full-stack, la lógica y los algoritmos.
-                    </p>
+                        <p id="dynamic-text">
+                            Me apasiona el desarrollo web full-stack, la lógica y los algoritmos.
+                        </p>
 
-                    <button id="btn-cambiar" class="btn btn-primary">
-                        Cambiar texto
-                    </button>
+                        <button id="change-btn" class="btn btn-primary">
+                            Cambiar texto
+                        </button>
+
+                    </div>
 
                 </div>
-
             </div>
-        </div>
         </section>
 
-        <!-- ========== PROYECTOS ========== -->
-        <section id="proyectos">
+        <section id="projects">
             <div class="container">
-                <h2 id="titulo-proyectos" class="section-title">Proyectos</h2>
+                <h2 class="section-title">Proyectos</h2>
 
-                <!-- Lista de proyectos -->
+
                 <ul class="projects-list">
 
                     <li>
                         <div class="project-card">
                             <h3>Proyecto Energía Inteligente</h3>
-                            <p>Aplicación web para la predicción del consumo energético en oficinas que integra scripts de Octave con una API en Flask
-                            y una interfaz interactiva en Streamlit, utilizando métodos numéricos como interpolación de Lagrange y splines.</p>
+                            <p>Aplicación web para la predicción del consumo energético en oficinas que integra scripts
+                                de Octave con una API en Flask (Python) y una interfaz interactiva en Streamlit, utilizando métodos numéricos como interpolación
+                                de Lagrange y splines.</p>
 
-                            <p class="project-extra oculto">
-                                Calcula sistemas solares fotovoltaicos según el consumo del usuario.
+                            <p class="project-extra hidden">
+                                Predice el consumo energético usando métodos numéricos.
                             </p>
 
-                            <a href="https://github.com/Dan18eP/proyecto_consumo_energetico" target="_blank"    class="project-link">Demo próximamente →</a>
+                            <a href="https://github.com/Dan18eP/proyecto_consumo_energetico" target="_blank"
+                                class="project-link">Ver detalles →</a>
 
                             <button class="btn-toggle">
                                 <span class="arrow">⌄</span>
                             </button>
 
-                            
+
                         </div>
                     </li>
 
                     <li>
                         <div class="project-card">
                             <h3>Sistema de Sorteos Interactivo</h3>
-                            <p>Aplicación web que permite gestionar sorteos dinámicos, selección aleatoria de participantes y visualización de
-                            resultados en tiempo real con animaciones. Desarrollada con ReactJS + ViteJS para Frontend y Backend con FastAPI (Python).</p>
-                            
-                            <p class="project-extra oculto">
+                            <p>Aplicación web que permite gestionar sorteos dinámicos, selección aleatoria de
+                                participantes y visualización de
+                                resultados en tiempo real con animaciones. Desarrollada con ReactJS + ViteJS para
+                                Frontend y Backend con FastAPI (Python).</p>
+
+                            <p class="project-extra hidden">
                                 Realiza sorteos automáticos con resultados en tiempo real.
                             </p>
 
@@ -119,62 +118,88 @@
                             <button class="btn-toggle">
                                 <span class="arrow">⌄</span>
                             </button>
-                            
-                            
+
+
                         </div>
                     </li>
 
                     <li>
                         <div class="project-card">
-                            <h3>Calculadora de Sistemas Solares Fotovoltaicos</h3>
-                            <p>Aplicación web para la estimación personalizada de sistemas solares fotovoltaicos, permitiendo calcular consumo
-                            energético, dimensionamiento del sistema y recomendaciones según las necesidades del usuario.</p>
-                            
-                            <p class="project-extra oculto">
-                                Predice el consumo energético usando métodos numéricos.
+                            <h3>Calculadora de Sistemas Fotovoltaicos</h3>
+                            <p>Aplicación web para la estimación personalizada de sistemas solares fotovoltaicos según region geográfica,
+                                permitiendo calcular consumo
+                                energético, dimensionamiento del sistema y recomendaciones según las necesidades del
+                                usuario.</p>
+
+                            <p class="project-extra hidden">
+                                Calcula sistemas solares fotovoltaicos según el consumo del usuario.
                             </p>
 
-                            <a href="https://docs.google.com/document/d/1CgJLxAboY3l5luFa2vceTDBo97R0TkCF/edit?usp=sharing&ouid=112135590430584512201&rtpof=true&sd=true" target="_blank" class="project-link">Ver detalles →</a>
+                            <a href="https://docs.google.com/document/d/1CgJLxAboY3l5luFa2vceTDBo97R0TkCF/edit?usp=sharing&ouid=112135590430584512201&rtpof=true&sd=true"
+                                target="_blank" class="project-link">Ver detalles →</a>
+
+                            <button class="btn-toggle">
+                                <span class="arrow">⌄</span>
+                            </button>
+                        </div>
+
+                    </li>
+
+                    <li>
+                        
+
+                        <div class="project-card">
+                            <h3>Dashboard Dataset Videojuegos</h3>
+                            <p>Se desarrolló un dashboard interactivo en Power BI a partir de la base de datos con información global del mercado de videojuegos, con el objetivo de analizar el comportamiento
+                                de las ventas de videojuegos desde diferentes dimensiones.</p>
+
+                            <p class="project-extra hidden">
+                                El dashboard permite identificar tendencias clave del mercado.
+                            </p>
+
+                            <a href="https://app.powerbi.com/groups/me/reports/31194a82-85f7-45e5-bf8e-8852b16b5ec0/573ac6a112354906518d?experience=power-bi"
+                                target="_blank" class="project-link">Ver detalles →</a>
 
                             <button class="btn-toggle">
                                 <span class="arrow">⌄</span>
                             </button>
 
-                            
                         </div>
                     </li>
+
+                        
+
+                    
 
                 </ul>
             </div>
         </section>
 
-        <!-- ========== CONTACTO ========== -->
-        <section id="contacto">
+        <section id="contact">
             <div class="container">
-                <h2 id="titulo-contacto" class="section-title">Contacto</h2>
+                <h2 class="section-title">Contacto</h2>
                 <p style="color: gray; margin-bottom: 1rem;">
-                ¿Tienes un proyecto en mente? Escríbeme.
+                    ¿Tienes un proyecto en mente? Escríbeme.
                 </p>
 
-                <!-- Formulario básico de contacto -->
                 <form class="contact-form" action="#" method="post">
 
-                <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
-                </div>
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+                    </div>
 
-                <div class="form-group">
-                    <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
-                </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+                    </div>
 
-                <div class="form-group">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" placeholder="Cuéntame tu idea..." required></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" placeholder="Cuéntame tu idea..." required></textarea>
+                    </div>
 
-                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
 
                 </form>
             </div>
@@ -182,12 +207,13 @@
 
     </main>
 
-    <!-- ========== PIE DE PÁGINA ========== -->
+
     <footer>
         <p>© 2026 Daniel Echeverría, Coder Riwi · Barranquilla, Colombia · Hecho con HTML5 y CSS</p>
     </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
